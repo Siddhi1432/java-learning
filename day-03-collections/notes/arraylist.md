@@ -194,3 +194,167 @@ as:
 > **A box that can contain only Integer objects.**
 
 This `<Employee>` part is called a **generic type parameter**, and it provides type safety.
+
+
+
+### 1. Which method adds an element?
+
+Use **`add()`**.
+
+```java
+names.add("Amit");
+```
+
+
+You can also add at a specific index:
+
+```java
+names.add(1, "Amit");
+```
+---
+
+### 2. Which method gets an element?
+
+Use **`get()`**.
+
+```java
+String name = names.get(1);
+```
+
+Result:
+
+```text
+Rahul
+```
+---
+
+### 3. Which method changes an existing element?
+
+Use **`set()`**.
+
+```java
+names.set(1, "Amit");
+```
+
+Before:
+
+```text
+[Siddhi, Rahul, Priya]
+```
+
+After:
+
+```text
+[Siddhi, Amit, Priya]
+```
+
+`set()` **replaces** the element at that index.
+
+---
+
+### 4. Which method removes an element?
+
+Use **`remove()`**.
+
+```java
+names.remove(1);
+```
+
+Before:
+
+```text
+[Siddhi, Rahul, Priya]
+```
+
+After:
+
+```text
+[Siddhi, Priya]
+```
+
+It removed the element at index `1`.
+
+---
+
+### 5. Which method tells me how many elements are in the list?
+
+Use **`size()`**.
+
+```java
+int count = names.size();
+```
+
+For:
+
+```text
+[Siddhi, Rahul, Priya]
+```
+
+`size()` returns:
+
+```text
+3
+```
+
+Important: For an array you use:
+
+```java
+array.length
+```
+
+For an `ArrayList` you use:
+
+```java
+list.size()
+```
+
+---
+
+## 6. What is the difference between `get()` and `set()`?
+
+This is a **very common interview question**.
+
+### `get()` → READ
+
+```java
+names.get(1);
+```
+
+Means:
+
+> "Give me the element at index 1."
+
+It **doesn't change** the list.
+
+---
+
+### `set()` → UPDATE
+
+```java
+names.set(1, "Amit");
+```
+
+Means:
+
+> "Replace the element at index 1 with Amit."
+
+It **changes** the list.
+
+### Easy trick to remember
+
+| Method     | Meaning | Example            |
+| ---------- | ------- | ------------------ |
+| `add()`    | Add     | `list.add("A")`    |
+| `get()`    | Read    | `list.get(0)`      |
+| `set()`    | Update  | `list.set(0, "B")` |
+| `remove()` | Delete  | `list.remove(0)`   |
+| `size()`   | Count   | `list.size()`      |
+
+Think **CRUD**:
+
+```text
+Create → add()
+Read   → get()
+Update → set()
+Delete → remove()
+```
